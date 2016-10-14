@@ -1,0 +1,108 @@
+section:not(.caption):not(.regular){
+  text-align: center;
+  height: 50%;
+  @include mobile-landscape{
+    height: 25%;
+  }
+  @include tablet-up{
+    height: 75%;
+    padding: 10px;
+  }
+  .details{
+    padding: 5px;
+    height: 100%;
+    position: relative;
+    img{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+
+  }
+}
+section.regular{
+  padding: 10px;
+
+  .text{
+    max-width: 1000px;
+    font-size: 18px;
+    @include tablet-up{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      font-size: 30px;
+      padding: 2em;
+    }
+  }
+}
+section.caption{
+  text-align: center;
+  margin: 2em 0;
+  span{
+    font-family: 'Courier New','Avara', 'Times New Roman', Arial, Helvetica, sans-serif;
+    font-size: 24px;
+  }
+}
+footer{
+  display: inline-block;
+  width: 100%;
+  @include tablet-up{
+    position: absolute;
+    bottom: 0;
+  }
+  .container{
+    float: left;
+    width: 100%;
+    text-align: center;
+    .audio-control{
+      width: 100%;
+      button{
+        background-color: transparent;
+        border: none;
+        margin: 0;
+        @include tablet-up{
+          text-align: left;
+          margin-left: 2em;
+        }
+        img{
+          width: 100px;
+        }
+      }
+    }
+    @include tablet-up{
+      width: 50%;
+    }
+    &:nth-child(1){
+      a{
+        font-family: 'Consola', 'Courier New', 'Avara', 'Times New Roman', Arial, Helvetica, sans-serif;
+        font-size: 35px;
+      }
+      @include tablet-up{
+        text-align: left;
+        a{
+          padding-left: 0.5em;
+          font-size: 50px;
+        }
+      }
+    }
+    &:nth-child(2){
+      a{
+        font-family: 'Bell Gothic Std Bold','Avara', 'Futura','Aktiv Grotesk', 'Times New Roman', Arial, Helvetica, sans-serif;
+        font-size: 75px;
+      }
+      @include tablet-up{
+        a{
+          padding-right: 0.5em;
+          font-size: 85px;
+        }
+        text-align: right;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+<section class="{{sectionClass}}">
+	<div class="details">
+		<img data-ng-src="{{imgSrc}}" alt="Image Placeholder" data-ng-if="!isStory"/>
+		<div class="text" data-ng-if="isStory">
+			<p>
+					"{{story}}"
+			</p>
+		</div>
+	</div>
+</section>
+<section class="caption" data-ng-if="!isStory">
+	<span>{{caption}}</span>
+</section>
+<footer>
+	<div class="container">
+		<div class="audio-control">
+			<button ng-click='toggleAudio()' ng-if="isStory">
+				<img ng-src="img/{{audioLabel}}.jpg" alt="Audio Control {{audioLabel}}" />
+			</button>
+		</div>
+
+		<a href="#{{next}}">{{identifier}}</a>
+	</div>
+	<div class="container">
+		<a href="#/">HOME</a>
+	</div>
+</footer>
+</div>
